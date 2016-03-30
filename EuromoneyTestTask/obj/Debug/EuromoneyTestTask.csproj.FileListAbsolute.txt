@@ -1,0 +1,11 @@
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\obj\Debug\EuromoneyTestTask.csprojResolveAssemblyReference.cache
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\EuromoneyTestTask.dll
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\EuromoneyTestTask.pdb
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\nunit.framework.dll
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\WebDriver.dll
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\WebDriver.Support.dll
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\nunit.framework.xml
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\WebDriver.xml
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\WebDriver.Support.xml
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\obj\Debug\EuromoneyTestTask.dll
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\obj\Debug\EuromoneyTestTask.pdb
