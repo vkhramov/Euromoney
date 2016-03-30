@@ -9,3 +9,5 @@ C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Deb
 C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\WebDriver.Support.xml
 C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\obj\Debug\EuromoneyTestTask.dll
 C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\obj\Debug\EuromoneyTestTask.pdb
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\EuromoneyTestTask.dll.config
+C:\Users\viktor.khramov\Source\Repos\EuromoneyTestTask\EuromoneyTestTask\bin\Debug\TechTalk.SpecFlow.dll

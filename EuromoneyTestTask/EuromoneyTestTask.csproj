@@ -56,6 +56,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.2.0.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
     <Reference Include="WebDriver">
       <HintPath>..\packages\Selenium.WebDriver.2.53.0\lib\net40\WebDriver.dll</HintPath>
     </Reference>
@@ -76,6 +79,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Features\PurchaseBookOfMonth.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchaseBookOfMonth.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ManagmentTeam.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagmentTeam.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\PurchaseBookOfMonthSteps.cs" />
+    <Compile Include="Steps\ManagmentTeamSteps.cs" />
     <Compile Include="TestMethods\CheckMethods.cs" />
     <Compile Include="TestMethods\NavigationMethods.cs" />
     <Compile Include="Tests\BookOfMonthTests.cs" />
@@ -84,8 +99,18 @@
     <Compile Include="TestMethods\TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Features\PurchaseBookOfMonth.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PurchaseBookOfMonth.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\ManagmentTeam.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ManagmentTeam.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

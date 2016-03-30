@@ -32,23 +32,18 @@ namespace EuromoneyTestTask
             Check = new CheckMethods(driver);
         }
 
-        //[TearDown]
-        //public void TeardownTest()
-        //{
-        //    try
-        //    {
-        //        driver.Quit();
-        //    }
-        //    catch (Exception)
-        //    {
-        //        // Ignore errors if unable to close the browser
-        //    }
-        //    Assert.AreEqual("", verificationErrors.ToString());
-        //}
-
-        
-
-       
-
+        [TearDown]
+        public void TeardownTest()
+        {
+            try
+            {
+                driver.Quit();
+            }
+            catch (Exception)
+            {
+                // Ignore errors if unable to close the browser
+            }
+            Assert.AreEqual("", verificationErrors.ToString());
+        }
     }
 }
