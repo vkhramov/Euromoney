@@ -64,18 +64,28 @@ namespace EuromoneyTestTask.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 4
+#line 5
+ testRunner.Given("Driver opened. URL set", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Check \"Store\" link")]
         public virtual void CheckStoreLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check \"Store\" link", ((string[])(null)));
-#line 4
-this.ScenarioSetup(scenarioInfo);
-#line 5
- testRunner.Given("I am on the Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 6
- testRunner.When("I open menu item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 7
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 8
+ testRunner.Given("I\'am on Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+ testRunner.When("I open menu item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
  testRunner.Then("The Euromoney Store link displayed correctly on the menu item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -86,13 +96,15 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void CheckIfStoreLinkNavigateToStore()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if \"Store\" link navigate to store", ((string[])(null)));
-#line 9
-this.ScenarioSetup(scenarioInfo);
-#line 10
- testRunner.Given("Menu item opened on the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 11
- testRunner.When("I press on Store link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 13
+ testRunner.Given("Menu item opened on the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 14
+ testRunner.When("I press on Store link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
  testRunner.Then("It navigates to the online store", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -103,46 +115,39 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ChaeckIfMoreDetailsNavigateToDetailsPage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Chaeck if \"More details\" navigate to details page", ((string[])(null)));
-#line 14
-this.ScenarioSetup(scenarioInfo);
-#line 15
- testRunner.Given("I am on Store page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 16
- testRunner.When("I press \"more details\" link on the book of month", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 17
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 18
+ testRunner.Given("I am on Store page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 19
+ testRunner.When("I press more details link on the book of month", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
  testRunner.Then("it navigates to the details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Check if \"Add to Cart\"add book to the shopping cart")]
-        public virtual void CheckIfAddToCartAddBookToTheShoppingCart()
+        [NUnit.Framework.DescriptionAttribute("Check if \"Add to Cart\"add book to the shopping cart and the price of the book is " +
+            "displayed in GBP")]
+        public virtual void CheckIfAddToCartAddBookToTheShoppingCartAndThePriceOfTheBookIsDisplayedInGBP()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if \"Add to Cart\"add book to the shopping cart", ((string[])(null)));
-#line 19
-this.ScenarioSetup(scenarioInfo);
-#line 20
- testRunner.Given("I am on Book of month details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 21
- testRunner.When("I click \"Add to cart\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if \"Add to Cart\"add book to the shopping cart and the price of the book is " +
+                    "displayed in GBP", ((string[])(null)));
 #line 22
- testRunner.Then("Book of the month is added to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Check if the price of the book is displayed in GBP")]
-        public virtual void CheckIfThePriceOfTheBookIsDisplayedInGBP()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if the price of the book is displayed in GBP", ((string[])(null)));
-#line 24
 this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 23
+ testRunner.Given("I am on Book of month details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 24
+ testRunner.When("I click Add to cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
- testRunner.When("I add book of month to cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("Book of the month is added to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 26
- testRunner.Then("The price of the book is displayed in GBP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("The price of the book is displayed in GBP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

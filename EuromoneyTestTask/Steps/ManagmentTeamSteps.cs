@@ -1,51 +1,66 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium.Firefox;
 
 namespace EuromoneyTestTask
 {
     [Binding]
-    public class ManagmentTeamSteps
+    class ManagmentTeamSteps : TestBase
     {
+        [Given(@"Set driver and URL")]
+        public void GivenSetDriverAndURL()
+        {
+            driver = new FirefoxDriver();
+            baseURL = "http://www.euromoneyplc.com";
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+            Navi = new NavigationMethods(driver);
+            Check = new CheckMethods(driver);
+        }
+
         [Given(@"I am on the Home Page")]
         public void GivenIAmOnTheHomePage()
         {
-            ScenarioContext.Current.Pending();
+            driver.Navigate().GoToUrl(baseURL);
         }
         
         [Given(@"Menu item opened")]
         public void GivenMenuItemOpened()
         {
-            ScenarioContext.Current.Pending();
+            Navi.OpenMenu();
         }
         
         [Given(@"Who We Are submenu opened")]
         public void GivenWhoWeAreSubmenuOpened()
         {
-            ScenarioContext.Current.Pending();
+            Navi.ClickWhoWeAre();
         }
         
         [When(@"I click on Managment team link")]
         public void WhenIClickOnManagmentTeamLink()
         {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"Managment team page opened")]
-        public void WhenManagmentTeamPageOpened()
-        {
-            ScenarioContext.Current.Pending();
+            Navi.ClickManagmentTeam();
         }
         
         [Then(@"Managment team page opened")]
         public void ThenManagmentTeamPageOpened()
         {
-            ScenarioContext.Current.Pending();
+            Check.CheckPage("http://www.euromoneyplc.com/who-we-are/management-team");
         }
+
+        [When(@"Managment team page opened")]
+        public void WhenManagmentTeamPageOpened()
+        {
+            driver.Navigate().GoToUrl(baseURL);
+            Navi.OpenMenu();
+            Navi.ClickWhoWeAre();
+            Navi.ClickManagmentTeam();
+        }
+
         
         [Then(@"The URL of the first image is present")]
         public void ThenTheURLOfTheFirstImageIsPresent()
         {
-            ScenarioContext.Current.Pending();
+            Check.CheckImgURL();
         }
     }
 }

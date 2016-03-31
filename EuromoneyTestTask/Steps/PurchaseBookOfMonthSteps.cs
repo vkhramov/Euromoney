@@ -1,87 +1,114 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium.Firefox;
+
 
 namespace EuromoneyTestTask
 {
+
     [Binding]
-    public class PurchaseBookOfMonthSteps
+    class PurchaseBookOfMonthSteps : TestBase
     {
+
+        [Given(@"Driver opened\. URL set")]
+        public void GivenDriverOpened_URLSet()
+        {
+            driver = new FirefoxDriver();
+            baseURL = "http://www.euromoneyplc.com";            
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));            
+            Navi = new NavigationMethods(driver);
+            Check = new CheckMethods(driver);
+        }
+
+        [Given(@"I'am on Home Page")]
+        public void GivenIAmOnHomePage()
+        {
+            driver.Navigate().GoToUrl(baseURL);
+        }
+
+       
+        [When(@"I open menu item")]
+        public void WhenIOpenMenuItem()
+        {
+            Navi.OpenMenu();
+        }
+
+        [Then(@"The Euromoney Store link displayed correctly on the menu item")]
+        public void ThenTheEuromoneyStoreLinkDisplayedCorrectlyOnTheMenuItem()
+        {
+            Check.CheckStoreLink();
+        }
+
         [Given(@"Menu item opened on the home page")]
         public void GivenMenuItemOpenedOnTheHomePage()
         {
-            ScenarioContext.Current.Pending();
+            driver.Navigate().GoToUrl(baseURL);
+            Navi.OpenMenu();
+        }
+
+        [When(@"I press on Store link")]
+        public void WhenIPressOnStoreLink()
+        {
+            Navi.ClickOnStoreLink();
+        }
+
+        [Then(@"It navigates to the online store")]
+        public void ThenItNavigatesToTheOnlineStore()
+        {
+            Navi.SwithToStoreWindow();
+            Check.CheckPage("http://store.euromoneyplc.com/");
         }
         
         [Given(@"I am on Store page")]
         public void GivenIAmOnStorePage()
         {
-            ScenarioContext.Current.Pending();
+            driver.Navigate().GoToUrl(baseURL);
+            Navi.OpenMenu();
+            Navi.ClickOnStoreLink();
+            Navi.SwithToStoreWindow();
+            Navi.ClosePopUp();
+        }
+
+        [When(@"I press more details link on the book of month")]
+        public void WhenIPressMoreDetailsLinkOnTheBookOfMonth()
+        {
+            Navi.ClickOnMoreDetails();
+        }
+
+        [Then(@"it navigates to the details page")]
+        public void ThenItNavigatesToTheDetailsPage()
+        {
+            //If "Add to cart" button presented wa are on "details" page.
+            Navi.ClickOnAddToChart();
         }
         
         [Given(@"I am on Book of month details page")]
         public void GivenIAmOnBookOfMonthDetailsPage()
         {
-            ScenarioContext.Current.Pending();
+            driver.Navigate().GoToUrl(baseURL);
+            Navi.OpenMenu();
+            Navi.ClickOnStoreLink();
+            Navi.SwithToStoreWindow();
+            Navi.ClosePopUp();
+            Navi.ClickOnMoreDetails();
         }
-        
-        [When(@"I open menu item")]
-        public void WhenIOpenMenuItem()
+
+        [When(@"I click Add to cart")]
+        public void WhenIClick()
         {
-            ScenarioContext.Current.Pending();
+            Navi.ClickOnAddToChart();
         }
-        
-        [When(@"I press on Store link")]
-        public void WhenIPressOnStoreLink()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"I press ""(.*)"" link on the book of month")]
-        public void WhenIPressLinkOnTheBookOfMonth(string p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"I click ""(.*)""")]
-        public void WhenIClick(string p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"I add book of month to cart")]
-        public void WhenIAddBookOfMonthToCart()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"The Euromoney Store link displayed correctly on the menu item")]
-        public void ThenTheEuromoneyStoreLinkDisplayedCorrectlyOnTheMenuItem()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"It navigates to the online store")]
-        public void ThenItNavigatesToTheOnlineStore()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"it navigates to the details page")]
-        public void ThenItNavigatesToTheDetailsPage()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
+
         [Then(@"Book of the month is added to the shopping cart")]
         public void ThenBookOfTheMonthIsAddedToTheShoppingCart()
         {
-            ScenarioContext.Current.Pending();
+            Check.CheckIfBookAdded();
         }
         
         [Then(@"The price of the book is displayed in GBP")]
         public void ThenThePriceOfTheBookIsDisplayedInGBP()
         {
-            ScenarioContext.Current.Pending();
+            Check.CheckPriceCurency();
         }
     }
 }

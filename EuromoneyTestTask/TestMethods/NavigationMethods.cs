@@ -64,8 +64,10 @@ namespace EuromoneyTestTask
 
         public void ClickOnStoreLink()
         {
-            driver.FindElement(By.XPath(".//*[@id='menu']/li[6]/a")).Click();
-            //driver.FindElement(By.XPath(".//*[@id='menu']/li[6]/a")).Click();
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.XPath(".//*[@id='menu']/li[6]/a")));
+            ClickOn(By.XPath(".//*[@id='menu']/li[6]/a"), "Store link");
+            //driver.FindElement(By.XPath(".//*[@id='menu']/li[6]/a")).Click();            
         }
 
         public void ClickWhoWeAre()
