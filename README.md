@@ -1,7 +1,7 @@
 This repository contain automated test stories.
 The site to test is http://www.euromoneyplc.com/ 
 
-Technologies used:
+Packages used:
 - id="NUnit" version="3.2.0" 
 - id="NUnit3TestAdapter" version="3.0.8-ctp-8" 
 - id="Selenium.Support" version="2.53.0" 
