@@ -8,7 +8,11 @@ Technologies used:
 - id="Selenium.WebDriver" version="2.53.0" 
 - id="SpecFlow" version="2.0.0"
 
-To launch tests you need to download Project to your local machine and open it in Visual Studio. \n
-You can find NUnit tests by opening Solution Explorer -> Tests folder \n
-You can find SpecFlow scenarios by opening Solution Explorer -> Features folder \n
-To launch test open Test Explorer and click Run on chosen test. \n
+To launch tests you need to download Project to your local machine and open it in Visual Studio. 
+
+You can find NUnit tests by opening Solution Explorer -> Tests folder 
+
+You can find SpecFlow scenarios by opening Solution Explorer -> Features folder 
+
+To launch test open Test Explorer and click Run on chosen test. 
+
