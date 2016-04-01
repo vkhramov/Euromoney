@@ -89,7 +89,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ManagmentTeam.feature</DependentUpon>
     </Compile>
-    <Compile Include="PageObjects.cs" />
+    <Compile Include="Objects\PageObjects.cs" />
     <Compile Include="Steps\PurchaseBookOfMonthSteps.cs" />
     <Compile Include="Steps\ManagmentTeamSteps.cs" />
     <Compile Include="TestMethods\CheckMethods.cs" />

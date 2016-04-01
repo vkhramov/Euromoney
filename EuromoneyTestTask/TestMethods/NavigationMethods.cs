@@ -54,7 +54,7 @@ namespace EuromoneyTestTask
 
         public void ClickOnAddToChart()
         {
-            ClickOn(By.CssSelector("td.btn_addtocart > input.btnSubmit"), "Add to cart button");
+            ClickOn(page.addToCart, "Add to cart button");
         }
 
         public void ClickOnMoreDetails()

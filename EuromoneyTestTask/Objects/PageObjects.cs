@@ -16,6 +16,7 @@ namespace EuromoneyTestTask
         public By managmentTeamLink;
         public By viewMoreDetailButton;
         public By storeLink;
+        public By addToCart;
 
         public PageObjects(IWebDriver driver)
         {
@@ -24,6 +25,7 @@ namespace EuromoneyTestTask
             managmentTeamLink = By.XPath("//a[contains(text(),'Management team')]");
             viewMoreDetailButton = By.XPath("(//input[@value='View more details'])[1]");
             storeLink = By.XPath("//a[contains(text(), 'Euromoney Store')]");
+            addToCart = By.XPath("//input[@value='Add to cart']");
         }
     }
 }
