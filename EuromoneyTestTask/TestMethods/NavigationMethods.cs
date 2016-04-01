@@ -12,17 +12,15 @@ namespace EuromoneyTestTask
     class NavigationMethods
     {
         IWebDriver driver;
+        PageObjects page;
 
         public NavigationMethods(IWebDriver driver)
         {
             this.driver = driver;
+            page = new PageObjects(this.driver);            
         }
 
-
-        public void ClickManagmentTeam()
-        {
-            ClickOn(By.XPath(".//*[@id='7F0853DA9D724593BF11788E77D841BD-collapse']/li[4]/a"), "Management Team button");
-        }
+       
 
         public void ClickOn(By locator, string name)
         {
@@ -49,6 +47,11 @@ namespace EuromoneyTestTask
             }
         }
 
+        public void ClickManagmentTeam()
+        {
+            ClickOn(page.managmentTeamLink, "Management Team button");
+        }
+
         public void ClickOnAddToChart()
         {
             ClickOn(By.CssSelector("td.btn_addtocart > input.btnSubmit"), "Add to cart button");
@@ -59,22 +62,21 @@ namespace EuromoneyTestTask
             //wait while mask disappear
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.XPath(".//*[@id='exposeMask']")));
-            ClickOn(By.XPath("html/body/table/tbody/tr[2]/td[2]/div/table/tbody/tr[3]/td[1]/table/tbody/tr[2]/td/input"), "View more details button "); //TODO optimize XPath!
+            ClickOn(page.viewMoreDetailButton, "View more details button ");
         }
 
         public void ClickOnStoreLink()
         {
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.XPath(".//*[@id='menu']/li[6]/a")));
-            ClickOn(By.XPath(".//*[@id='menu']/li[6]/a"), "Store link");
-            //driver.FindElement(By.XPath(".//*[@id='menu']/li[6]/a")).Click();            
+            ClickOn(page.storeLink, "Store link");
         }
 
         public void ClickWhoWeAre()
         {
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.XPath(".//*[@id='7F0853DA9D724593BF11788E77D841BD']/a")));
-            ClickOn(By.XPath(".//*[@id='7F0853DA9D724593BF11788E77D841BD']/a"), "WHO WE ARE button");
+            wait.Until(ExpectedConditions.ElementToBeClickable(page.whoWeAreLink));
+            ClickOn(page.whoWeAreLink, "WHO WE ARE button");
         }
 
         public void OpenMenu()
