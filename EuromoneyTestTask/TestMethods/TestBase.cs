@@ -35,32 +35,5 @@ namespace EuromoneyTestTask
         {
             driver.Quit();
         }
-
-
-        //[SetUp]
-        //public void SetupTest()
-        //{
-        //    driver = new FirefoxDriver();
-        //    baseURL = "http://www.euromoneyplc.com";
-        //    verificationErrors = new StringBuilder();
-        //    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-        //    driver.Navigate().GoToUrl(baseURL);
-        //    Navi = new NavigationMethods(driver);
-        //    Check = new CheckMethods(driver);
-        //}
-
-        //[TearDown]
-        //public void TeardownTest()
-        //{
-        //    try
-        //    {
-        //        driver.Quit();
-        //    }
-        //    catch (Exception)
-        //    {
-        //        // Ignore errors if unable to close the browser
-        //    }
-        //    Assert.AreEqual("", verificationErrors.ToString());
-        //}
     }
 }

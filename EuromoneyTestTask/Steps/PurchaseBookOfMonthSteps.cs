@@ -10,33 +10,6 @@ namespace EuromoneyTestTask
     class PurchaseBookOfMonthSteps : TestBase
     {
 
-        //[BeforeScenario]
-        //public void SetUp()
-        //{
-        //    driver = new FirefoxDriver();
-        //    baseURL = "http://www.euromoneyplc.com";
-        //    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-        //    Navi = new NavigationMethods(driver);
-        //    Check = new CheckMethods(driver);
-        //}
-
-        //[AfterScenario]
-        //private void Teardown()
-        //{
-        //    driver.Quit();
-        //}
-
-
-        //[Given(@"Driver opened\. URL set")]
-        //public void GivenDriverOpened_URLSet()
-        //{
-        //    driver = new FirefoxDriver();
-        //    baseURL = "http://www.euromoneyplc.com";            
-        //    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));            
-        //    Navi = new NavigationMethods(driver);
-        //    Check = new CheckMethods(driver);
-        //}
-
         [Given(@"I'am on Home Page")]
         public void GivenIAmOnHomePage()
         {

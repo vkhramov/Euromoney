@@ -64,6 +64,7 @@ namespace EuromoneyTestTask
             //wait while mask disappear
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.XPath(".//*[@id='exposeMask']")));
+
             ClickOn(storeMain.viewMoreDetailButton, "View more details button ");
         }
 
@@ -71,6 +72,7 @@ namespace EuromoneyTestTask
         {
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.XPath(".//*[@id='menu']/li[6]/a")));
+            wait.Until(ExpectedConditions.ElementToBeClickable(leftMenu.storeLink));
             ClickOn(leftMenu.storeLink, "Store link");
         }
 

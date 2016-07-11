@@ -113,8 +113,6 @@
     <Compile Include="Steps\ManagmentTeamSteps.cs" />
     <Compile Include="TestMethods\CheckMethods.cs" />
     <Compile Include="TestMethods\NavigationMethods.cs" />
-    <Compile Include="Tests\BookOfMonthTests.cs" />
-    <Compile Include="Tests\ManagmentPageTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestMethods\TestBase.cs" />
   </ItemGroup>
