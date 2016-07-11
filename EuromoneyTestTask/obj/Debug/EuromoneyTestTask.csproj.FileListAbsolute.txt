@@ -24,3 +24,4 @@ C:\Users\viktor.khramov\Source\Repos\EuroMoney\EuromoneyTestTask\bin\Debug\WebDr
 C:\Users\viktor.khramov\Source\Repos\EuroMoney\EuromoneyTestTask\bin\Debug\nunit.framework.xml
 C:\Users\viktor.khramov\Source\Repos\EuroMoney\EuromoneyTestTask\bin\Debug\WebDriver.xml
 C:\Users\viktor.khramov\Source\Repos\EuroMoney\EuromoneyTestTask\bin\Debug\WebDriver.Support.xml
+C:\Users\viktor.khramov\Source\Repos\EuroMoney\EuromoneyTestTask\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll

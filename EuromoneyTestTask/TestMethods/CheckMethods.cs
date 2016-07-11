@@ -35,7 +35,7 @@ namespace EuromoneyTestTask
 
         public void CheckIfBookAdded()
         {
-            string quantity = driver.FindElement(By.XPath("html/body/table/tbody/tr[2]/td[2]/div/table[1]/tbody/tr/td/div/form/table/tbody/tr[2]/td[2]/input")).GetAttribute("value");
+            string quantity = driver.FindElement(By.XPath(".//*[@class='tbl03 tbl03_roundbg']//input[@type='text']")).GetAttribute("value");
             Console.WriteLine("Quantity: " + quantity);
             Assert.AreEqual(quantity, "1");
         }
@@ -50,7 +50,7 @@ namespace EuromoneyTestTask
         public void CheckImgURL()
         {
             string firstImageSrc = null;
-            firstImageSrc = driver.FindElement(By.XPath("html/body/section/div[2]/div/div/div/div/div/img")).GetAttribute("src"); //get first image URL
+            firstImageSrc = driver.FindElement(By.XPath("//section/div[2]//img")).GetAttribute("src"); //get first image URL
             Assert.AreNotEqual(firstImageSrc, null, "First image URL "); //check if URL presented
         }
     }
