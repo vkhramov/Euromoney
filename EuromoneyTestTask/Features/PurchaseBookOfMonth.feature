@@ -1,8 +1,8 @@
 ﻿Feature: Purchase Book Of Month
 As a user I want go to the Euromoney store So that I can purchase the book of the month
 
-Background: 
-	Given Driver opened. URL set
+//Background: 
+//	Given Driver opened. URL set
 
 Scenario: Check "Store" link
 	Given I'am on Home Page

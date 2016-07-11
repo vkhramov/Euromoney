@@ -2,20 +2,28 @@
 using TechTalk.SpecFlow;
 using OpenQA.Selenium.Firefox;
 
+
 namespace EuromoneyTestTask
 {
     [Binding]
     class ManagmentTeamSteps : TestBase
     {
-        [Given(@"Set driver and URL")]
-        public void GivenSetDriverAndURL()
-        {
-            driver = new FirefoxDriver();
-            baseURL = "http://www.euromoneyplc.com";
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-            Navi = new NavigationMethods(driver);
-            Check = new CheckMethods(driver);
-        }
+
+        //[BeforeScenario]
+        //public void SetUp()
+        //{
+        //    driver = new FirefoxDriver();
+        //    baseURL = "http://www.euromoneyplc.com";
+        //    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+        //    Navi = new NavigationMethods(driver);
+        //    Check = new CheckMethods(driver);
+        //}
+
+        //[AfterScenario]
+        //public void Teardown()
+        //{                       
+        //    driver.Quit();                        
+        //}
 
         [Given(@"I am on the Home Page")]
         public void GivenIAmOnTheHomePage()

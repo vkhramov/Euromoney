@@ -1,8 +1,8 @@
 ﻿Feature: Managment Team
 As a user I want to click the management team menu items So that we can see that the correct page is displayed
 
-Background: 
-	Given Set driver and URL
+//Background: 
+//	Given Set driver and URL
 
 Scenario: Check if correct page is displayed
 	Given I am on the Home Page

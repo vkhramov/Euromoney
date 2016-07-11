@@ -32,7 +32,7 @@ namespace EuromoneyTestTask.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Purchase Book Of Month", "As a user I want go to the Euromoney store So that I can purchase the book of the" +
-                    " month", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    " month\r\n\r\n//Background: \r\n//\tGiven Driver opened. URL set", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,14 +64,6 @@ namespace EuromoneyTestTask.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 4
-#line 5
- testRunner.Given("Driver opened. URL set", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Check \"Store\" link")]
         public virtual void CheckStoreLink()
@@ -79,8 +71,6 @@ namespace EuromoneyTestTask.Features
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check \"Store\" link", ((string[])(null)));
 #line 7
 this.ScenarioSetup(scenarioInfo);
-#line 4
-this.FeatureBackground();
 #line 8
  testRunner.Given("I\'am on Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
@@ -98,8 +88,6 @@ this.FeatureBackground();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if \"Store\" link navigate to store", ((string[])(null)));
 #line 12
 this.ScenarioSetup(scenarioInfo);
-#line 4
-this.FeatureBackground();
 #line 13
  testRunner.Given("Menu item opened on the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
@@ -117,8 +105,6 @@ this.FeatureBackground();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Chaeck if \"More details\" navigate to details page", ((string[])(null)));
 #line 17
 this.ScenarioSetup(scenarioInfo);
-#line 4
-this.FeatureBackground();
 #line 18
  testRunner.Given("I am on Store page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
@@ -138,8 +124,6 @@ this.FeatureBackground();
                     "displayed in GBP", ((string[])(null)));
 #line 22
 this.ScenarioSetup(scenarioInfo);
-#line 4
-this.FeatureBackground();
 #line 23
  testRunner.Given("I am on Book of month details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 24
