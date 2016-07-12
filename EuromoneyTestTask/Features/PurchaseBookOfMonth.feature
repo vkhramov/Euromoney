@@ -2,8 +2,8 @@
 As a user I want go to the Euromoney store So that I can purchase the book of the month
 
 Scenario: Check "Store" link
-	Given I'am on Home Page
-	When I open menu item
+	Given I am on the Home Page
+	And Menu item opened
 	Then The Euromoney Store link displayed correctly on the menu item
 
 Scenario: Check if "Store" link navigate to store
@@ -11,7 +11,7 @@ Scenario: Check if "Store" link navigate to store
 	When I press on Store link 
 	Then It navigates to the online store
 
-Scenario: Chaeck if "More details" navigate to details page
+Scenario: Check if "More details" navigate to details page
 	Given I am on Store page
 	When I press more details link on the book of month
 	Then it navigates to the details page

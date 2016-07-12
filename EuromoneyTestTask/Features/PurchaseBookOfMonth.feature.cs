@@ -72,9 +72,9 @@ namespace EuromoneyTestTask.Features
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
- testRunner.Given("I\'am on Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
- testRunner.When("I open menu item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("Menu item opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 7
  testRunner.Then("The Euromoney Store link displayed correctly on the menu item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -99,10 +99,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Chaeck if \"More details\" navigate to details page")]
-        public virtual void ChaeckIfMoreDetailsNavigateToDetailsPage()
+        [NUnit.Framework.DescriptionAttribute("Check if \"More details\" navigate to details page")]
+        public virtual void CheckIfMoreDetailsNavigateToDetailsPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Chaeck if \"More details\" navigate to details page", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if \"More details\" navigate to details page", ((string[])(null)));
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 15

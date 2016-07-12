@@ -17,7 +17,7 @@ namespace EuromoneyTestTask
         {
             //check if currency is GBP
             string priceCurrency = driver.FindElement(By.XPath(".//*[@id='cID']/option[1]")).GetAttribute("selected");
-            Assert.AreEqual("true", priceCurrency, "currancy is GPB: ");
+            Assert.AreEqual("true", priceCurrency, "currency is GPB: ");
         }
     }
 }
