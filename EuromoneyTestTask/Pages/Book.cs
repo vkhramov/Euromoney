@@ -2,13 +2,14 @@
 
 namespace EuromoneyTestTask
 {
-    class Book
+    public class Book : BasePage
     {
-        public By addToCart;
+        public By addToCart = By.XPath("//input[@value='Add to cart']");
 
-        public Book()
+        public void ClickOnAddToChart()
         {
-            addToCart = By.XPath("//input[@value='Add to cart']");
+            ClickOn(addToCart, "Add to cart button");
         }
+        
     }
 }

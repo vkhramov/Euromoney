@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
@@ -10,25 +9,29 @@ namespace EuromoneyTestTask
     [TestFixture]
     class TestBase
     {
-        protected IWebDriver driver;        
-        protected string baseURL;
-        protected NavigationMethods Navi;
-        protected CheckMethods Check;
+        public HomePage home = new HomePage();
+        public LeftMenu leftMenu = new LeftMenu();
+        public StoreMain storeMain = new StoreMain();
+        public Book book = new Book();
+        public ManagmentTeam managmentTeam = new ManagmentTeam();
+        public ShoppingCart shopCart = new ShoppingCart();
+           
+        public IWebDriver driver = BrowserIni.driver;        
+        public string baseURL = BrowserIni.baseURL;
+               
 
-        [BeforeScenario]
-        public void SetUp()
-        {
-            driver = new FirefoxDriver();
-            baseURL = "http://www.euromoneyplc.com";
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
-            Navi = new NavigationMethods(driver);
-            Check = new CheckMethods(driver);
-        }
+        //[BeforeScenario]
+        //public void SetUp()
+        //{
+        //    driver = new FirefoxDriver();
+        //    baseURL = "http://www.euromoneyplc.com";
+        //    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));                        
+        //}
 
-        [AfterScenario]
-        public void Teardown()
-        {
-            driver.Quit();
-        }
+        //[AfterScenario]
+        //public void Teardown()
+        //{
+        //    driver.Quit();
+        //}
     }
 }

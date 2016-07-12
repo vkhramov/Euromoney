@@ -105,12 +105,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ManagmentTeam.feature</DependentUpon>
     </Compile>
+    <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\Book.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\LeftMenu.cs" />
+    <Compile Include="Pages\ManagmentTeam.cs" />
+    <Compile Include="Pages\ShoppingCart.cs" />
     <Compile Include="Pages\StoreMain.cs" />
     <Compile Include="Steps\PurchaseBookOfMonthSteps.cs" />
     <Compile Include="Steps\ManagmentTeamSteps.cs" />
+    <Compile Include="TestMethods\BrowserIni.cs" />
     <Compile Include="TestMethods\CheckMethods.cs" />
     <Compile Include="TestMethods\NavigationMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
