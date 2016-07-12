@@ -1,6 +1,5 @@
-﻿using System;
-using TechTalk.SpecFlow;
-using OpenQA.Selenium.Firefox;
+﻿using TechTalk.SpecFlow;
+
 
 
 namespace EuromoneyTestTask

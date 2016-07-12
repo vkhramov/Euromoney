@@ -32,7 +32,7 @@ namespace EuromoneyTestTask.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Purchase Book Of Month", "As a user I want go to the Euromoney store So that I can purchase the book of the" +
-                    " month\r\n\r\n//Background: \r\n//\tGiven Driver opened. URL set", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    " month", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -69,13 +69,13 @@ namespace EuromoneyTestTask.Features
         public virtual void CheckStoreLink()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check \"Store\" link", ((string[])(null)));
-#line 7
+#line 4
 this.ScenarioSetup(scenarioInfo);
-#line 8
+#line 5
  testRunner.Given("I\'am on Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
+#line 6
  testRunner.When("I open menu item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
+#line 7
  testRunner.Then("The Euromoney Store link displayed correctly on the menu item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -86,13 +86,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void CheckIfStoreLinkNavigateToStore()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if \"Store\" link navigate to store", ((string[])(null)));
-#line 12
+#line 9
 this.ScenarioSetup(scenarioInfo);
-#line 13
+#line 10
  testRunner.Given("Menu item opened on the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 14
+#line 11
  testRunner.When("I press on Store link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
+#line 12
  testRunner.Then("It navigates to the online store", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -103,13 +103,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ChaeckIfMoreDetailsNavigateToDetailsPage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Chaeck if \"More details\" navigate to details page", ((string[])(null)));
-#line 17
+#line 14
 this.ScenarioSetup(scenarioInfo);
-#line 18
+#line 15
  testRunner.Given("I am on Store page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 19
+#line 16
  testRunner.When("I press more details link on the book of month", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
+#line 17
  testRunner.Then("it navigates to the details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -122,15 +122,15 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if \"Add to Cart\"add book to the shopping cart and the price of the book is " +
                     "displayed in GBP", ((string[])(null)));
-#line 22
+#line 19
 this.ScenarioSetup(scenarioInfo);
-#line 23
+#line 20
  testRunner.Given("I am on Book of month details page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 24
+#line 21
  testRunner.When("I click Add to cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
+#line 22
  testRunner.Then("Book of the month is added to the shopping cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 26
+#line 23
  testRunner.And("The price of the book is displayed in GBP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

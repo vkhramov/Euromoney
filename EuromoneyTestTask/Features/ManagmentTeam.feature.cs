@@ -32,7 +32,7 @@ namespace EuromoneyTestTask.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Managment Team", "As a user I want to click the management team menu items So that we can see that " +
-                    "the correct page is displayed\r\n\r\n//Background: \r\n//\tGiven Set driver and URL", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "the correct page is displayed", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -69,17 +69,17 @@ namespace EuromoneyTestTask.Features
         public virtual void CheckIfCorrectPageIsDisplayed()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check if correct page is displayed", ((string[])(null)));
-#line 7
+#line 4
 this.ScenarioSetup(scenarioInfo);
-#line 8
+#line 5
  testRunner.Given("I am on the Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
+#line 6
  testRunner.And("Menu item opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
+#line 7
  testRunner.And("Who We Are submenu opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
+#line 8
  testRunner.When("I click on Managment team link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 12
+#line 9
  testRunner.Then("Managment team page opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -90,11 +90,11 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void VerifyThatTheURLOfTheFirstImageIsPresent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify that the URL of the first image is present", ((string[])(null)));
-#line 14
+#line 11
 this.ScenarioSetup(scenarioInfo);
-#line 15
+#line 12
  testRunner.When("Managment team page opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 16
+#line 13
  testRunner.Then("The URL of the first image is present", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
