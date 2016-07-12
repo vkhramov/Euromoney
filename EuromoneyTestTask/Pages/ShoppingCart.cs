@@ -16,8 +16,8 @@ namespace EuromoneyTestTask
         public void CheckPriceCurency()
         {
             //check if currency is GBP
-            string priceCurrency = driver.FindElement(By.XPath(".//*[@id='cID']/option[1]")).GetAttribute("selected");
-            Assert.AreEqual("true", priceCurrency, "currency is GPB: ");
+            string priceCurrency = driver.FindElement(By.XPath(".//*[@action='/scripts/cart_action.asp?task=update']/table/tbody/tr[2]/td[3]")).Text.ToString();
+            StringAssert.Contains("Ј", priceCurrency);          
         }
     }
 }
