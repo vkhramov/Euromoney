@@ -27,6 +27,9 @@ namespace EuromoneyTestTask
 
         public void ClickManagmentTeam()
         {
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(managmentTeamLink));
+            wait.Until(ExpectedConditions.ElementToBeClickable(managmentTeamLink));
             ClickOn(managmentTeamLink, "Management Team button");
         }
 

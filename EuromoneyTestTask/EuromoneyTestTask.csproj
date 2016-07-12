@@ -114,11 +114,9 @@
     <Compile Include="Pages\StoreMain.cs" />
     <Compile Include="Steps\PurchaseBookOfMonthSteps.cs" />
     <Compile Include="Steps\ManagmentTeamSteps.cs" />
-    <Compile Include="TestMethods\BrowserIni.cs" />
-    <Compile Include="TestMethods\CheckMethods.cs" />
-    <Compile Include="TestMethods\NavigationMethods.cs" />
+    <Compile Include="TestBase\BrowserIni.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestMethods\TestBase.cs" />
+    <Compile Include="TestBase\TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
