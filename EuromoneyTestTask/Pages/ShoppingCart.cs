@@ -17,7 +17,7 @@ namespace EuromoneyTestTask
         {
             //check if currency is GBP
             string priceCurrency = driver.FindElement(By.XPath(".//*[@action='/scripts/cart_action.asp?task=update']/table/tbody/tr[2]/td[3]")).Text.ToString();
-            StringAssert.Contains("Ј", priceCurrency);          
+            StringAssert.Contains("£", priceCurrency);          
         }
     }
 }
